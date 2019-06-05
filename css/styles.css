@@ -106,6 +106,7 @@ input#app-titl{
 
 .dev-info{
   background-color: #ffece6;
+  padding: 15px;
 
 }
 
@@ -119,7 +120,7 @@ input#app-titl{
 
   margin-bottom: -130px;
   margin-left: -182px;
-
+/* position: fixed; */
  }
  .parallelogram {
 	width: 99px;
@@ -156,6 +157,7 @@ input#app-titl{
   display: flex;
   flex-direction: column;
   align-content: center;
+
   /* margin-left: 10px; */
   margin-left:-270px;
   margin-top: -600px;
@@ -166,8 +168,9 @@ input#app-titl{
   font-weight: bold;
   /* text-align: center; */
 }
-.col-lg-4{
+.col-md-4{
   z-index: 1;
+
 }
 .col-md-8{
   z-index: 2;

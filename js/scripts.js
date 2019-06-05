@@ -65,71 +65,66 @@ var reset = function(){
 }
   var posting =function(post){
   if (post.difficulty === "entry"){
-    // console.log(newPost);
 
-    $(".entry-level").append('<div class="entry-level">'+
-                            '<div class="ent-design">'+
-                            '<h5>Job Title:<strong><span id="bg-title">'+post.jobTitle+'</span></strong></h5>'+
-                            '<p>Company name: <span class="bg-comp-name">'+post.comName+'</span></p>'+
-                            '<p>Location: <span class="bg-location">'+post.jobLocation+'</span></p>'+
-                            '<p>Skills Required'+
+    $(".entry-level").append('<div class="ent-design">'+
+                            '<p><strong>Job Title:<span id="bg-title">'+post.title+'</span></strong></p>'+
+                            '<p><strong>Company name:</strong> <span class="bg-comp-name">'+post.companyName+'</span></p>'+
+                            '<p><strong>Location: </strong><span class="bg-location">'+post.location+'</span></p>'+
+                            '<p><strong>Skills Required:</strong>'+
                             '<ul>'+
                             '<span class="bg-skills">'+jbSkillListElement+'</span>'+
                             '</ul>'+
                             '</p>'+
-                            '<p>Additional skills: <span class="bg-add-skills">'+post.moreJbSkills+'</span></p>'+
-                            '<p>Description: <span class="bg-post-desc">'+post.jobDescription+'</span></p>'+
-                            '<p>Work condition: <span class="bg-condition">'+post.jobCondition+'</span></p>'+
+                            '<p><strong>Additional skills:</strong> <span class="bg-add-skills">'+post.moreJbSkills+'</span></p>'+
+                            '<p><strong>Description:</strong> <span class="bg-post-desc">'+post.description+'</span></p>'+
+                            '<p><strong>Work condition:</strong> <span class="bg-condition">'+post.condition+'</span></p>'+
                             '<div class="flx-btn">'+
                             '<button type="button" class="apply">Apply</button>'+
                             '</div>'+
                               '</div>'+
-                            '</div>');
+                            '</div>'+'<hr>');
 
-          // $(".bg-skills").append()
   }
 
   else if (post.difficulty === "intermediate"){
-    $(".int-level").append('<div class="int-level">'+
-                          '<div class="med-design">'+
-                          '<h5">Job Title:<strong><span id="int-title">'+post.jobTitle+'</span></strong></h5>'+
-                          '<p>Company name: <span id="int-comp-name">'+post.comName+'</span></p>'+
-                          '<p>Location: <span id="int-location">'+post.jobLocation+'</span></p>'+
-                          '<p> Skills Required'+
+    $(".int-level").append('<div class="med-design">'+
+                          '<p><strong>Job Title:<span id="int-title">'+post.title+'</span></strong></p>'+
+                          '<p><strong>Company name:</strong> <span id="int-comp-name">'+post.companyName+'</span></p>'+
+                          '<p><strong>Location:</strong> <span id="int-location">'+post.location+'</span></p>'+
+                          '<p><strong> Skills Required:</strong>'+
                           '<ul>'+
                           '<span id="int-skills">'+jbSkillListElement+'</span>'+
                           '</ul>'+
                           '</p>'+
-                          '<p>Additional skills: <span id="int-add-skills">'+post.moreJbSkills+'</span></p>'+
-                          '<p>Description: <span id="int-post-desc">'+post.jobDescription+'</span></p>'+
-                          '<p>Work condition: <span id="int-condition">'+post.jobCondition+'</span></p>'+
+                          '<p><strong>Additional skills:</strong> <span id="int-add-skills">'+post.moreJbSkills+'</span></p>'+
+                          '<p><strong>Description:</strong> <span id="int-post-desc">'+post.description+'</span></p>'+
+                          '<p><strong>Work condition:</strong> <span id="int-condition">'+post.condition+'</span></p>'+
                           '<div class="flx-btn">'+
                           '<button type="button" class="apply">Apply</button>'+
                           '</div>'+
                           '</div>'+
-                        '</div>');
+                        '</div>'+'<hr>');
   }
 
 
   else if (post.difficulty === "advanced"){
-    $(".adv-level").append('<div class="adv-level">'+
-                          '<div class="adv-design">'+
-                          '<h5>Job Title: <strong><span id="adv-title">'+post.jobTitle+'</span></strong></h5>'+
-                          '<p>Company name: <span id="adv-comp-name">'+post.comName+'</span></p>'+
-                          '<p>Location: <span id="adv-location">'+post.jobLocation+'</span></p>'+
-                          '<p> Skills Required'+
+    $(".adv-level").append('<div class="adv-design">'+
+                          '<p><strong>Job Title: <span id="adv-title">'+post.title+'</span></strong></p>'+
+                          '<p><strong>Company name:</strong> <span id="adv-comp-name">'+post.companyName+'</span></p>'+
+                          '<p><strong>Location: </strong><span id="adv-location">'+post.location+'</span></p>'+
+                          '<p><strong> Skills Required: </strong>'+
                           '<ul>'+
                           '<span id="adv-skills">'+jbSkillListElement+'</span>'+
                           '</ul>'+
                           '</p>'+
-                          '<p>Additional skills: <span id="adv-add-skills">'+post.moreJbSkills+'</span></p>'+
-                          '<p>Description: <span id="adv-post-desc">'+post.jobDescription+'</span></p>'+
-                          '<p>Work condition: <span id="adv-condition">'+post.jobCondition+'</span></p>'+
+                          '<p><strong>Additional skills:</strong> <span id="adv-add-skills">'+post.moreJbSkills+'</span></p>'+
+                          '<p><strong>Description:</strong> <span id="adv-post-desc">'+post.description+'</span></p>'+
+                          '<p><strong>Work condition:</strong> <span id="adv-condition">'+post.condition+'</span></p>'+
                           '<div class="flx-btn">'+
                           '<button type="button" class="apply">Apply</button>'+
                           '</div>'+
                           '</div>'+
-                          '</div>');
+                          '</div>'+'<hr>');
   }
 }
 var devsArray = new Developers();
@@ -154,17 +149,13 @@ $(document).ready(function()  {
    developer1.appSkills=[];
 
    $("input:checkbox[name=app-skills]:checked").each(function(){
-       appSkillListElement += "<li>" + $(this).val() + "</li>";
-       $("#app-skills").text(appSkillListElement);
+       // appSkillListElement += "<li>" + $(this).val() + "</li>";
+       // $("#app-skills").text(appSkillListElement);
+       $("#app-skills").append("<li>" + $(this).val() + "</li>");
        developer1.appSkills.push($(this).val());
     });
 
-  // developer1.fName = fName;
-  // developer1.lName = lName;
-  // developer1.title = title;
-  // developer1.hourlyRate = hourlyRate;
-  // developer1.experience = experience;
-  // developer1.appSkills = appSkills;
+
   developer1 = new Developer(fName,lName,title,hourlyRate,experience,appSkills);
 
 
@@ -172,6 +163,7 @@ $(document).ready(function()  {
   // console.log(devsArray);
   textInfo(developer1);
   $(".our-info").show();
+  $("h3.our-info").text("Created By:");
   $(".app-title").hide();
   $(".app-form").hide();
   $(".post-title").hide();
@@ -214,7 +206,8 @@ $(document).ready(function()  {
      $(".app-form").show();
      $(".app-title").show();
      $(".post-title").hide();
-     $(".our-info").hide();
+     $(".our-info").show();
+     $("h3.our-info").text("Job Application");
      $(".interface").hide();
      $(".post-form").hide();
      $(".developer-info").hide();
@@ -234,8 +227,10 @@ $(document).ready(function()  {
 
   $("#posting-btn").click(function(){
     $(".post-form").show();
-    $(".post-title").show();
-    $(".our-info").hide();
+    // $(".post-title").show();
+    $("h3.our-info").text("Job Listing");
+
+
     $(".app-title").hide();
     $(".jumbotron").hide();
     $(".interface").hide();
